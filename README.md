@@ -1,2 +1,3 @@
-# Emergent-Web-Design
-Notes and Code from class
+# Final Project: Personal Portfolio
+### How to Run
+- text
