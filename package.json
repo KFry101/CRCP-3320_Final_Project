@@ -1,0 +1,29 @@
+{
+  "name": "crcp-3320_final_project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web app fro a personal portfolio",
+  "homepage": "https://github.com/KFry101/CRCP-3320_Final_Project#readme",
+  "bugs": {
+    "url": "https://github.com/KFry101/CRCP-3320_Final_Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KFry101/CRCP-3320_Final_Project.git"
+  },
+  "license": "ISC",
+  "author": "katie frymire",
+  "type": "module",
+  "main": "app.mjs",
+  "scripts": {
+    "start": "node src/app.mjs",
+    "dev": "nodemon src/app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
