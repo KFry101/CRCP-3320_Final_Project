@@ -3,12 +3,12 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-//in class
-app.use(express.static('public'));
+//Bootstrap and static files
+//app.use(express.static('public'));
 
 
 app.get('/', (request, response) => {
-    response.send('Hello, World!!!!!');
+    response.send('Hello, World!!!');
 });
 
 app.listen(port, () => {
