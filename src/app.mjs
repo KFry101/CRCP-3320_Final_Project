@@ -4,9 +4,9 @@ const app = express();
 const port = 3000;
 
 //Bootstrap and static files
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
-
+//Routes
 app.get('/', (request, response) => {
     response.send('Hello, World!!!');
 });
