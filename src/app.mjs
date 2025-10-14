@@ -5,20 +5,17 @@ const app = express();
 const port = 3000;
 
 //Bootstrap and other public files
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 //Routes
-app.get('/', (request, response) => {
-    response.send('Hello, World!!!');
-});
-
 app.get('/randomColor', (request, response) => {
-    response.send('This is a random color!');
+  const randomColor = RandomColor.getRandomHex();
+  response.send(`<html><head><title>Random Color</title></head><body style="background-color:${randomColor};"><h1>Your Random Color is: ${randomColor}</h1></body></html>`);
 })
 
 app.get('/api/randomColor', (request, response) => {
-    const randomColor = RandomColor.getRandomHex();
-    response.json({ color: randomColor });
+  const randomColor = RandomColor.getRandomHex();
+  response.json({ color: randomColor });
     
 })
 
