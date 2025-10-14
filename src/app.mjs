@@ -1,4 +1,5 @@
 import express from 'express';
+import { RandomColor } from './utils/random_color.mjs';
 
 const app = express();
 const port = 3000;
@@ -12,10 +13,16 @@ app.get('/', (request, response) => {
 });
 
 app.get('/randomColor', (request, response) => {
-    response.send('About me');
+    response.send('This is a random color!');
 })
 
+app.get('/api/randomColor', (request, response) => {
+    const randomColor = RandomColor.getRandomHex();
+    response.json({ color: randomColor });
+    
+})
 
+//Listener
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
