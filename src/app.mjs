@@ -14,6 +14,12 @@ app.get('/randomColor', (request, response) => {
   response.send(`<html><head><title>Random Color</title></head><body style="background-color:${randomColor};"><h1>Your Random Color is: ${randomColor}</h1></body></html>`);
 })
 
+app.get('/color/:colorName', (request, response) => {
+  const colorName = request.params.colorName;
+  colorName = encode(colorName);
+  response.send(`<html><head><title>${colorName}</title></head><body style="background-color:${colorName};"><h1>This page is ${colorName}!</h1></body></html>`);
+});
+
 app.get('/api/randomColor', (request, response) => {
   const randomColor = RandomColor.getRandomHex();
   response.json({ color: randomColor });
