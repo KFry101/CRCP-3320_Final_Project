@@ -1,26 +1,70 @@
 
+/* Purple color palette */
+:root {
+  --bs-purple-100: #e2d9f3;
+  --bs-purple-200: #d6b8ff;
+  --bs-purple-300: #c29ffa;
+  --bs-purple-400: #a678e1;
+  --bs-purple: #5b10b1;
+  --bs-purple-600: #4e0e99;
+  --bs-purple-700: #3f0b7a;
+  --bs-purple-800: #2f085c;
+  --bs-purple-900: #1f053d;
+}
 
-.container-fluid{
-    max-width: 100%;
+/* purple text and background classes */
+.text-purple-100 {
+  color: var(--bs-purple-100);
+}
+.text-purple-500 {
+  color: var(--bs-purple);
 }
 
 
-
-
-
-
-.text-purple {
-    color: rgba(91, 16, 177, 1);
+.bg-purple-200 {
+  background-color: var(--bs-purple-200);
+}
+.bg-purple-500 {
+  background-color: var(--bs-purple);
 }
 
-.text-gray{
-    color: rgba(249, 250, 251, 1);
+/* Gray text and background classes */
+.text-gray-100 {
+  color: var(--bs-gray-100);
 }
 
-.bg-light-purple{
-    background-color: rgba(229, 214, 255, 1);
+.bg-gray-100 {
+  background-color: var(--bs-gray-100);
 }
-.bg-purple {
-    background-color: rgba(91, 16, 177, 1);
-    
+
+
+/* Custom styles for components */
+#katie-image {
+  width: 30rem;
+  height: auto;
+  margin: auto;
+  border: 8px solid var(--bs-purple);
+}
+
+#katie-image:hover {
+  border: 8px solid var(--bs-purple-400);
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+/* All navbar links */
+.navbar .nav-link {
+    color: var(--bs-gray-100); /* example: light gray */
+}
+
+/* On hover */
+.navbar .nav-link:hover {
+    color: var(--bs-purple); /* or whatever color you like */
+}
+
+/* Active link */
+.navbar .nav-link.active {
+    color: var(--bs-purple-500);
 }
