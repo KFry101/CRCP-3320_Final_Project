@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.static('public'));
 
 //Routes
-app.get('/AboutMe', (request, response) => {
+app.get('/Artwork/EconomicStress', (request, response) => {
     response.send('About me');
 })
 
