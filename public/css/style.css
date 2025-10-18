@@ -41,11 +41,10 @@
 /* Custom styles for components */
 /*******************************************************************/
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   background-color: #000;
   color: var(--bs-gray-100);
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 #katie-image {
@@ -110,13 +109,17 @@ body {
 }
 
 .container {
-  justify-items: center;
-  align-items: center;
+  
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.grid-container{
+
+.grid {
   display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3rem;
+  perspective: 1000px;
 }
 
 #header-content {
@@ -128,7 +131,7 @@ body {
 
 .static-card {
   background: var(--bs-purple-900);
-  border: 2px solid var(--bs-p);
+  border: 2px solid transparent;
   border-radius: 30px;
   padding: 3rem;
   position: relative;
@@ -166,6 +169,7 @@ body {
 
 
 .section {
+  margin:0;
   padding: 8rem 0;
   position: relative;
 }
@@ -175,18 +179,38 @@ body {
   font-weight: 900;
   text-align: center;
   margin-bottom: 3rem;
+
 }
 
 .card {
   border: 2px solid var(--bs-purple);
-  border-radius: 15px;
+  border-radius: 30px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
   padding: 3rem;
+  box-sizing: border-box;
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
+.card-title{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.card-body{
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
