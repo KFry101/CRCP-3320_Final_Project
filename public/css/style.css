@@ -1,11 +1,11 @@
 
 /* Purple color palette */
 :root {
-  --bs-purple-100: #e2d9f3;
+  --bs-purple-100: #e3dcf0;
   --bs-purple-200: #d6b8ff;
   --bs-purple-300: #c29ffa;
   --bs-purple-400: #a678e1;
-  --bs-purple: #5b10b1;
+  --bs-purple-500: #5b10b1;
   --bs-purple-600: #4e0e99;
   --bs-purple-700: #3f0b7a;
   --bs-purple-800: #2f085c;
@@ -39,10 +39,18 @@
 
 
 /* Custom styles for components */
+/*******************************************************************/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: var(--bs-gray-900);
+  margin: 0;
+  padding: 0;
+}
+
 #katie-image {
   width: 30rem;
   height: auto;
-  margin: auto;
   border: 8px solid var(--bs-purple);
 }
 
@@ -50,22 +58,98 @@
   border: 8px solid var(--bs-purple-400);
 }
 
+.navbar {
+  background-color: rgba(52, 17, 116, 0.534);
+  position: fixed;
+}
+
+.navbar-brand {
+  color: var(--bs-gray-100);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-btn {
+  color: var(--bs-gray-100);
+  border:  var(--bs-purple-700) 2px solid;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: border 0.3s;
+}
+.navbar-btn:hover {
+  border:  var(--bs-purple-100) 2px solid;
+  color: var(--bs-gray-100);
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+}
 .container-fluid {
-  max-width: 100%;
+  margin: 10px auto;
+  padding: 0 50px;
 }
 
-/* All navbar links */
-.navbar .nav-link {
-    color: var(--bs-gray-100); /* example: light gray */
+.container {
+  margin: 1rem auto;
 }
 
-/* On hover */
-.navbar .nav-link:hover {
-    color: var(--bs-purple); /* or whatever color you like */
+#header-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 2rem;
 }
 
-/* Active link */
-.navbar .nav-link.active {
-    color: var(--bs-purple-500);
+.static-card {
+  background: linear-gradient(135deg, rgba(25, 0, 255, 0.1), rgba(89, 0, 255, 0.1));
+  border: 2px solid var(--bs-p);
+  border-radius: 30px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
+#static-title {
+  font-size: 3 rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+#static-subtitle {
+  font-size: 1.5 rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.social-btn {
+  border: 2px solid transparent;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.card {
+  border: 2px solid var(--bs-purple);
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
