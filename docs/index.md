@@ -1,7 +1,4 @@
----
-title: Katie Fry — Portfolio
-layout: default
----
+
 
 ## Hi — I'm Katie 👋
 
