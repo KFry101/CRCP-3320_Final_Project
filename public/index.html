@@ -18,7 +18,7 @@
                     <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6M7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5z"/>
                 </svg>
             </a>
-            <div class="d-grid gap-5 d-md-block">
+            <div class="d-grid d-md-block">
                 <a class="btn navbar-btn" href="#home" role="button">Home</a>
                 <a class="btn navbar-btn" href="#projects" role="button">Projects</a>
                 <a class="btn navbar-btn" href="#artwork" role="button">Artwork</a>
@@ -33,91 +33,106 @@
             <div class="row"> 
                 <h1 id="header-name"  class="text-right fw-bold">
                     Hello, I'm 
-                    <span class="text-purple-500">Katie Frymire.</span><br>
+                    <span class="text-purple">Katie Frymire.</span><br>
                 </h1>
+            </div>
+            <div class="row align-items-center">
+                 <img id="katie-image" src="images/self.jpg" class="img fluid rounded-circle" alt="Photo of Katie Frymire">
             </div>
             <div class="row">
                 <div class="static-card " >
-                    <div id="static-title" class="card-title"> 
-                        <h1>Creativity is my craft</h1>
-                    </div>
-                    <div id="static-subtitle" class="card-body">
-                        <p>Storytelling is my art</p>
-                    </div>
-                    <div class="d-grid gap-5 d-md-block">
+                    <h1 id="static-title" class="card-title"> 
+                        Creativity is my craft
+                    </h1>
+                    <p id="static-subtitle" class="card-body">
+                        <em>Technology is my paint</em> 
+                    </p>
+                    <div class="d-grid d-md-block">
                         <a class="social-btn" href="https://www.linkedin.com/in/katie-frymire-2804682a0" role="button" target="_blank">Linkedin</a>
+                        <a download class="social-btn" href="/files/resume.pdf" role="button">Resume</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-     <section id="projects" class="section"> 
+    <hr>
+     <section id="coding" class="section"> 
         <div class="container">
             <h2 class="section-title">
-                Projects
+                Coding
             </h2>
            
             <div class="grid">
                 <div class="card">
-                    <h3 class="card-title"></h3>
+                    <h3 class="card-title"> </h3>
                     <h5 class="card-subtitle"> </h5>
                     <p class="card-body">
-                        
+
                     </p>
+                    <div class="specs">
+                        <span class="spec-tag">XXXX</span>
+                        <span class="spec-tag">xxxx</span>
+                        <span class="spec-tag">xxxx</span>
+                    </div> 
                 </div>
                 <div class="card">
-                    <h3 class="card-title"></h3>
-                    <h5 class="card-subtitle"> </h5>
+                    <h3 class="card-title">NCR Atleos Hackathon: EasyAccess</h3>
+                    <h5 class="card-subtitle">June 2025</h5>
                     <p class="card-body">
-                        
+                        <b>Won 1st place at the Frisco site and ranked in the top 25</b>
+                        <br><br>
+                        Developed a mobile application, for both iOS and android, that would facilitate cardless ATM withdrawals with one's
+                        phone, using a person's biometrics for additional security. Presented a detailed plan for future development of the backend connect to atm and bank.
                     </p>
+                    <div class="specs">
+                        <span class="spec-tag">Swift</span>
+                        <span class="spec-tag">React Native</span>
+                        <span class="spec-tag">Javascript</span>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="card-title"></h3>
-                    <h5 class="card-subtitle"> </h5>
+                <div class="card" onclick="event.stopPropagation(); window.open('#home', '_blank')" style="cursor: pointer;"> 
+                    <!-- TODO: get the repo step up for the game -->
+                    <h3 class="card-title">Dugeon Tiles</h3>
+                    <h5 class="card-subtitle">Spring 2025</h5>
                     <p class="card-body">
-                        
+                        A tile-based dungeon crawling video game.
+                        Features include randomly generated monster spawns and turn-based combat/movement.
+                        Players must navigate through levels and defeat monsters to reach the end of the dungeon before the timer runs out.
+                        The game emphasizes replayability and time pressure, offering unique challenges each run.
+                        <br><br>
+                        Made in my Creative Coding III course at Southern Methodist University.
                     </p>
+                    <div class="specs">
+                        <span class="spec-tag">Java</span>
+                        <span class="spec-tag">p5.js</span>
+                    </div> 
                 </div>
-                <div class="card">
-                    <h3 class="card-title"></h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
-                        
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="card-title"></h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
-                        
-                    </p>
-                </div>
-                <div class="card">
+                <div class="card" onclick="event.stopPropagation(); window.open('https://devpost.com/software/ezpptx', '_blank')" style="cursor: pointer;">
                     <h3 class="card-title">HackSMU VI: EZPPTX</h3>
-                    <h5 class="card-subtitle">2024</h5>
+                    <h5 class="card-subtitle">October 2024</h5>
                     <p class="card-body">
                         <b>Won 1st place Overall and  MLH - Most Creative Adobe Express Add-On 
                         EzPPTX solves an issue within Adobe Express. </b>
                         <br><br>
-                        Express does not give users the ability to turn its presentations into PowerPoint files, only image files (PNG, JPEG, PDF). 
-                        You would have to use a different Adobe software, Adobe Acrobat, to convert PDF to PowerPoint.
-                        EzPPTX is an Adobe Express add-on that consists of two features: conversion to a .pptx file and conversion to a .docx file.
-                        <br> <br>
-                        <a href="https://devpost.com/software/ezpptx">[Read the full DevPost Submission →]</a>
+                        EzPPTX is an Adobe Express add-on that consists of two features: conversion to a dynamic .pptx file and conversion to an AI generated .docx summary file.
+                        <div class="specs">
+                            <span class="spec-tag">Adobe creative sdk</span>
+                            <span class="spec-tag">node.js</span>
+                            <span class="spec-tag">Javascript</span>
+                            <span class="spec-tag">python</span>
+                            <span class="spec-tag">openai api</span>
+                    </div>
                     </p>
                 </div>
             </div> 
         </div>
-     </section>
-
+    </section>
+    <hr>
     <section id="artwork" class="section">  
          <div class="container">
             <h2 class="section-title">
                 Artwork
             </h2>
-           
             <div class="grid">
                 <div class="card">
                     <h3 class="card-title"> </h3>
@@ -137,6 +152,7 @@
                         <a href="">[Read the full artist statement →]</a>
                     </p>
                 </div>
+
                 <div class="card">
                     <h3 class="card-title"> </h3>
                     <h5 class="card-subtitle"> </h5>
@@ -147,31 +163,13 @@
                     </p>
                 </div>
                 <div class="card">
-                    <h3 class="card-title"> </h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
-
-                        <br> <br>
-                        <a href="">[Read the full artist statement →]</a>
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="card-title"> </h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
-
-                        <br> <br>
-                        <a href="">[Read the full artist statement →]</a>
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="card-title">Economic Stresses</h3>
+                    <h3 class="card-title">Social Stressors</h3>
                     <h5 class="card-subtitle"> 2023</h5>
                     <p>
                         A collage series confronting the emotional weight of economic hardship. 
                         Through chaotic layering and symbolic fragments, these works reflect the stress, identity struggles, and systemic pressures faced by those in marginalized communities. 
                         <br> <br>
-                        <a href="/Artwork/EconomicStress">[Read the full artist statement →]</a>
+                        <a href="/Artwork/SocialStresors">[Read the full artist statement →]</a>
                     </p>
                 </div>
             </div> 
