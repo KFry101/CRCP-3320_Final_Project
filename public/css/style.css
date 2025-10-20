@@ -43,6 +43,25 @@ body {
   overflow-x: hidden;
 }
 
+#p5-background {
+  position: fixed;   /* make it cover viewport */
+  inset: 0;          /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;       /* behind everything */
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  
+}
+
+
 a {
   color: #5b10b1;
 }
@@ -66,11 +85,12 @@ hr {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(111, 0, 255, 0.1);
-  backdrop-filter: blur(20px);
+  
+  background: rgba(16, 0, 37, 0.2);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-  z-index: 1000;
   padding: 1rem 0;
+  z-index: 5;
   transition: all 0.3s ease;
 }
 
@@ -197,8 +217,8 @@ hr {
 }
 
 .card {
-  background: rgba(217, 188, 255, 0.75);
-  backdrop-filter: blur(20px);
+  background: rgba(217, 188, 255, 0.60);
+  backdrop-filter: blur(10px);
   border: 3px solid transparent;
   border-radius: 30px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
