@@ -38,11 +38,19 @@
 /*******************************************************************/
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  background-color: #000;
   color: var(--bs-gray-100);
   overflow-x: hidden;
 }
 
+#bg{
+  position: fixed;   /* make it cover viewport */
+  inset: 0;          /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;       /* behind everything */
+  overflow: hidden;
+  background: linear-gradient(180deg, rgb(59, 1, 77), rgb(37, 4, 99));
+}
 #p5-background {
   position: fixed;   /* make it cover viewport */
   inset: 0;          /* top:0; right:0; bottom:0; left:0; */
@@ -50,15 +58,6 @@ body {
   height: 100%;
   z-index: -1;       /* behind everything */
   overflow: hidden;
-}
-
-.content {
-  position: relative;
-  z-index: 10;
-  color: white;
-  text-align: center;
-  font-family: system-ui, sans-serif;
-  
 }
 
 

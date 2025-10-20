@@ -32,9 +32,9 @@ function setup() {
 }
 
 function draw() {
-  drawGradientBackground();
+  clear();
 
-    const starHue = random(30, 35); // golden-orange hue
+    const starHue = random(35, 40); // golden-orange hue
     //const starHue = random(100, 150); // blueish green hue
 
   for (let i = 0; i < stars.length; i++) {
@@ -60,18 +60,6 @@ function draw() {
   }
 }
 
-function drawGradientBackground() {
-  noFill();
-  const topColor = color(275, 70, 30);   // violet
-  const bottomColor = color(230, 50, 10); // deep indigo-blue
-
-  for (let y = 0; y < height; y++) {
-    let inter = map(y, 0, height, 0, 1);
-    let c = lerpColor(topColor, bottomColor, inter);
-    stroke(c);
-    line(0, y, width, y);
-  }
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
