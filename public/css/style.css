@@ -85,7 +85,6 @@ hr {
   position: fixed;
   top: 0;
   width: 100%;
-  
   background: rgba(16, 0, 37, 0.2);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 255, 255, 0.2);
@@ -148,9 +147,9 @@ hr {
 }
 
 .static-card {
-  background: linear-gradient(150deg,  rgba(192, 22, 214, 0.4), rgb(68, 0, 255, 0.4));
+  background: linear-gradient(150deg,  rgba(192, 22, 214, 0.6), rgb(68, 0, 255, 0.6));
   border: 0px solid transparent;
-  border-radius: 30px;
+  border-radius: 2rem;
   padding: 3rem 0rem;
   margin: 1rem auto;
   position: relative;
@@ -197,14 +196,26 @@ hr {
   
 }
 
-.section-title {
-  font-size: 5rem;
-  font-weight: 900;
+.section-title-box{
   text-align: center;
   margin-bottom: 5rem;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 5px;
+  padding: 2rem 4rem; /* add spacing around text */
+  background: linear-gradient(45deg,  rgba(192, 22, 214, 0.4), rgb(68, 0, 255, 0.4));
+  border-radius: 1rem;
+  transform:skew(-10deg)
+}
 
+.section-title span {
+  display: inline-block;
+  transform: skew(10deg); 
 }
 
 
@@ -217,23 +228,19 @@ hr {
 }
 
 .card {
-  background: rgba(217, 188, 255, 0.60);
-  backdrop-filter: blur(10px);
-  border: 3px solid transparent;
+  background: rgba(228, 188, 255, 0.6);
   border-radius: 30px;
+  backdrop-filter: blur(20px);
   color:#fff;
-  box-shadow: 0 10px 20px rgba(48, 0, 110, 0.6);
   position: relative;
-  overflow: hidden;
   min-width: 400px;
   padding: 3rem;
-  box-sizing:content-box;
   transition: all 0.5s ease;
 }
 
 .card:hover {
-  background: rgba(175, 131, 250, 0.85);
-  transform: translate(5px,-5px);
+  background: linear-gradient(150deg,  rgba(228, 188, 255, 0.6), rgb(68, 0, 255, 0.6));
+  transform: translate(5px,-10px);
   box-shadow: 0 20px 40px rgba(38, 0, 141, 0.4);
   transition: all 0.5s ease;
 }

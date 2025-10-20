@@ -34,7 +34,7 @@ function setup() {
 function draw() {
   drawGradientBackground();
 
-    const starHue = random(10, 35); // golden-orange hue
+    const starHue = random(30, 35); // golden-orange hue
     //const starHue = random(100, 150); // blueish green hue
 
   for (let i = 0; i < stars.length; i++) {
