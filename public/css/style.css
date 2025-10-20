@@ -91,6 +91,7 @@ hr {
   padding: 1rem 0;
   z-index: 5;
   transition: all 0.3s ease;
+  
 }
 
 .navbar-brand {
@@ -141,7 +142,7 @@ hr {
 
 #header-content {
   text-align: center;
-  z-index: 2;
+  z-index: 0;
   max-width: 1000px;
   padding: 0 2rem;
 }
@@ -235,14 +236,14 @@ hr {
   position: relative;
   min-width: 400px;
   padding: 3rem;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
 
 .card:hover {
-  background: linear-gradient(150deg,  rgba(228, 188, 255, 0.6), rgb(68, 0, 255, 0.6));
-  transform: translate(5px,-10px);
-  box-shadow: 0 20px 40px rgba(38, 0, 141, 0.4);
-  transition: all 0.5s ease;
+  background: linear-gradient(150deg,  rgba(228, 188, 255, 0.7), rgba(146, 106, 255, 0.7));
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 30px  rgba(65, 39, 138, 0.3);
+  transition: all 1s ease;
 }
 
 @media (max-width: 1200px) {
