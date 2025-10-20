@@ -1,11 +1,12 @@
 let cnv;
 let stars = [];
-const numStars = 1000;
+const numStars = 500;
 
 function setup() {
   cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent('p5-background');
 
+  // keep canvas behind page content
   cnv.style('position', 'fixed');
   cnv.style('left', '0px');
   cnv.style('top', '0px');
@@ -22,8 +23,10 @@ function setup() {
       baseX: random(width),
       baseY: random(height),
       size: random(2, 8),
-      baseBright: random(60, 150),
-      drift: random(0.001, 0.004)
+      baseBright: random(60, 90),
+      drift: random(0.001, 0.004),
+      twinkleSpeed: random(0.003, 0.008),
+      twinkleOffset: random(TWO_PI)
     });
   }
 }
@@ -31,36 +34,35 @@ function setup() {
 function draw() {
   drawGradientBackground();
 
-  // warm golden hue (around 40° on the HSB wheel)
-  const starHue = 30; // adjust toward 35–45 for warmer/cooler gold
+    const starHue = random(10, 35); // golden-orange hue
+    //const starHue = random(100, 150); // blueish green hue
 
   for (let i = 0; i < stars.length; i++) {
     let s = stars[i];
 
-    const x =
-      s.baseX + (noise(s.xOff + frameCount * s.drift) - 0.5) * width * 0.6;
-    const y =
-      s.baseY + (noise(s.yOff + frameCount * s.drift) - 0.5) * height * 0.6;
+    const x = s.baseX + (noise(s.xOff + frameCount * s.drift) - 0.5) * width * 0.6;
+    const y = s.baseY + (noise(s.yOff + frameCount * s.drift) - 0.5) * height * 0.6;
 
-    // Distance from mouse to star
     const d = dist(mouseX, mouseY, x, y);
 
-    // Glow intensity — closer to mouse = brighter
-    const glow = constrain(map(d, 0, 250, 100, s.baseBright), s.baseBright, 100);
+    const pullX = (mouseX - x) * 75 / (d + 1);
+    const pullY = (mouseY - y) * 75 / (d + 1);
+    
+    const twinkle = s.baseBright + sin(frameCount * s.twinkleSpeed + i) * 20;
+    const glowAlpha = map(d, 0, 250, 0.07, 0.02); // fade glow farther away
 
-    // Subtle reactive motion (push away from mouse)
-    const pushX = (x - mouseX) * 10 / (d + 1);
-    const pushY = (y - mouseY) * 10 / (d + 1);
+    noStroke();
+    fill((starHue + 20), 80, 100, glowAlpha * 0.4); // golden glow
+    ellipse(x + pullX, y + pullY, s.size * 6); // large, faint halo
 
-    fill(starHue, 80, glow, 90); // golden glow
-    ellipse(x + pushX, y + pushY, s.size);
+    fill(starHue, 60, twinkle, 100);
+    ellipse(x + pullX, y + pullY, s.size);
   }
 }
 
 function drawGradientBackground() {
   noFill();
-  // soft fantasy violet gradient
-  const topColor = color(275, 70, 30); // purple-violet
+  const topColor = color(275, 70, 30);   // violet
   const bottomColor = color(230, 50, 10); // deep indigo-blue
 
   for (let y = 0; y < height; y++) {
