@@ -49,7 +49,7 @@ body {
   height: 100%;
   z-index: -1;       /* behind everything */
   overflow: hidden;
-  background: linear-gradient(180deg, rgb(59, 1, 77), rgb(37, 4, 99));
+  background: linear-gradient(180deg, rgb(42, 0, 97), rgb(22, 0, 104));
 }
 #p5-background {
   position: fixed;   /* make it cover viewport */
@@ -228,21 +228,21 @@ hr {
 }
 
 .card {
-  background: rgba(228, 188, 255, 0.6);
+  background: rgba(214, 188, 255, 0.6);
   border-radius: 30px;
   backdrop-filter: blur(20px);
   color:#fff;
   position: relative;
   min-width: 400px;
   padding: 3rem;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .card:hover {
-  background: linear-gradient(150deg,  rgba(228, 188, 255, 0.7), rgba(146, 106, 255, 0.7));
+  background: linear-gradient(150deg,  rgba(228, 188, 255, 0.9), rgba(121, 106, 255, 1));
   transform: translateY(-10px);
   box-shadow: 10px 10px 30px  rgba(65, 39, 138, 0.3);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 1200px) {
