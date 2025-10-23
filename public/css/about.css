@@ -12,7 +12,6 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     padding: 2rem 4rem; /* add spacing around text */
-    background: linear-gradient(45deg,  rgba(105, 22, 214, 0.4), rgba(17, 0, 255, 0.4));
+  background: linear-gradient(90deg,  rgba(145, 116, 255, 0.9), rgba(78, 58, 255, .7));
     border-radius: 1rem;
-    transform: skew(0deg);
 }
