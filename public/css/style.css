@@ -22,24 +22,24 @@ body {
 #p5-background {
   position: fixed;   
   inset: 0;          
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 100vh;
   z-index: -1;       
   overflow: hidden;
 }
 
 
 hr {
-  border: 2px solid #523d66;
+  border: 3px solid #523d66;
 }
 
 #katie-image {
-  width: 30rem;
+  width: 40vh;
   height: auto;
   margin: auto;
   padding:0px;
   border: 8px solid  rgba(78, 58, 255, 1);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   box-shadow: 0 20px 40px rgba(38, 0, 141, 0.4);
 }
 
@@ -82,14 +82,13 @@ hr {
   align-items: center;
   justify-content: center;
   position: relative;
-  
 }
 
 #header-name {
   margin-top: 8rem;
   font-size: 4rem;
   font-weight: 900;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   box-sizing: border-box;
 }
 .container-fluid {
@@ -123,13 +122,13 @@ hr {
 #static-title {
   font-size: 3rem;
   font-weight: 900;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #static-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .social-btn {
@@ -153,7 +152,7 @@ hr {
 
 .section {
   margin:0;
-  padding: 8rem 0;
+  padding: 5rem 0;
   position: relative;
   
 }
@@ -169,7 +168,7 @@ hr {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  padding: 2rem 6rem; /* add spacing around text */
+  padding: 2rem 10rem; /* add spacing around text */
   background: linear-gradient(180deg, rgba(78, 58, 255, .9), rgba(145, 116, 255, 0.9));
   border-radius: 1rem;
   transform:skew(-10deg)

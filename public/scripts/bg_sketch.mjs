@@ -1,6 +1,6 @@
 let cnv;
 let stars = [];
-const numStars = 500;
+const numStars = 750;
 
 function setup() {
   cnv = createCanvas(windowWidth, windowHeight);
