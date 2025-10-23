@@ -1,17 +1,21 @@
 import express from 'express';
 import { RandomColor } from './utils/random_color.mjs';
 import { RandomNumber } from './utils/random_number.mjs';
+import { render } from 'ejs';
 
 const app = express();
 const port = 3000;
 
-//Bootstrap and other public files
+app.use(express.json());
 app.use(express.static('public'));
+
+app.set('views', './views');
+app.set('view engine', 'ejs');
 
 //Routes
 app.get('/randomColor', (request, response) => {
-  const randomColor = RandomColor.getRandomHex();
-  response.send(`<html><head><title>Random Color</title></head><body style="background-color:${randomColor};"><h1>Your Random Color is: ${randomColor}</h1></body></html>`);
+  const hexColor = RandomColor.getRandomHex();
+  response.render('randomColor', {hexColor: hexColor});
 })
 
 app.get('/color/:colorName', (request, response) => {
@@ -23,6 +27,10 @@ app.get('/color/:colorName', (request, response) => {
 app.get('/api/randomColor', (request, response) => {
   const randomColor = RandomColor.getRandomHex();
   response.json({ color: randomColor });
+})
+
+app.get('/randomNumber', (request, response) => {
+  response.render('randomNumber')
 })
 
 app.get('/api/randomNumber', (request, response) => {
