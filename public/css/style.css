@@ -45,7 +45,6 @@ hr {
 
 .navbar {
   position: fixed;
-  top: 0;
   width: 100%;
   padding: 1rem;
   background: rgba(6, 0, 37, 0.2);
