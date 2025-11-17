@@ -20,6 +20,7 @@ body {
 }
 
 #p5-background {
+  justify-self: center;
   position: fixed;   
   inset: 0;          
   width: auto;
@@ -27,7 +28,6 @@ body {
   z-index: -1;       
   overflow: hidden;
 }
-
 
 hr {
   border: 3px solid #523d66;
