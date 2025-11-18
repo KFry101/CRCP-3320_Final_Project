@@ -63,6 +63,7 @@ app.get('/artwork/:id', (req, res) => {
   res.render('artwork', {artName: artId});
 });
 
+
 app.use((request, response, next) => {
   response.status(404).render('errors/404');
 });

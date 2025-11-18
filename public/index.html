@@ -10,171 +10,179 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="../scripts/bg_sketch.mjs"></script>
+    <script src="../scripts/index_bg_sketch.mjs"></script>
     <div id="p5-background"></div>
     <header>
         <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill=white class="bi bi-braces-asterisk" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6M7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5z"/>
-                    </svg>
+                <a class="navbar-brand" href="/">
+                    KF
                 </a>
-                <div class="text-right">
-                    <a class="btn navbar-btn" href="/" role="button">Home</a>
-                    <a class="btn navbar-btn" href="/about" role="button">About</a>
-                    <a class="btn navbar-btn" href="#code" role="button">Code</a>
-                    <a class="btn navbar-btn" href="#art" role="button">Art</a>
-                </div>  
+
+                <div class="d-flex ms-auto align-items-stretch">
+                    <a class="btn navbar-btn d-flex align-items-center px-4" href="/" role="button">Home</a>
+                    <a class="btn navbar-btn d-flex align-items-center px-4 ms-2" href="/about" role="button">About</a>
+                </div>
             </div>
         </nav>
     </header>
-<main>
-    <section id="home" class="home">
-        <div id="home-content" class="container ">
-            <div class="row"> 
-                <h2 id="home-name"  class="text-right fw-bold">
-                    Hello, I'm 
-                    <span class="text-purple">Katie Frymire.</span><br>
-                </h2>
-            </div>
-            <div class="row align-items-center">
-                 <img id="katie-image" src="../images/self.jpg" class="img fluid rounded-circle" alt="Photo of Katie Frymire">
-            </div>
-            <div class="row">
-                <div class="static-card " >
-                    <h1 id="static-title" class="card-title"> 
-                        Creativity is my craft
-                    </h1>
-                    <p id="static-subtitle" class="card-body">
-                        <em>Technology is my paint</em> 
-                    </p>
-                    <span class="p-">
-                        <a class="social-btn" href="/about" role="button" target="_self">About Me</a>
-                        <a class="social-btn" href="https://www.linkedin.com/in/katie-frymire-2804682a0" role="button" target="_blank">Linkedin</a>
-                        <a download class="social-btn" href="/files/resume.pdf" role="button">Resume</a>
-                    </span>
+    <main>
+        <section id="home" class="home">
+            <div id="home-content" class="container ">
+                <div class="row"> 
+                    <h2 id="home-name"  class="text-right fw-bold">
+                        Hello, I'm 
+                        <span class="text-purple">Katie Frymire.</span><br>
+                    </h2>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="code" class="section"> 
-        <div class="container">
-            <div class="section-title-box">
-                <h2 class="section-title">
-                    <span>Code</span>
-                </h2>
-            </div>           
-            <div class="grid">
-                <div class="card" onclick="event.stopPropagation(); window.open('https://github.com/KFry101/CS3341-server-client-game', '_blank')" style="cursor: pointer;">
-                    <h3 class="card-title">Client-Server Game Program</h3>
-                    <h5 class="card-subtitle">November 2025</h5>
-                    <p class="card-body">
-
-                    </p>
-                    <div class="specs">
-                        <span class="spec-tag">Java</span>
-                        <span class="spec-tag">Threads</span>
-                    </div> 
+                <div class="row align-items-center">
+                    <img id="katie-image" src="../images/self.jpg" class="img fluid rounded-circle" alt="Photo of Katie Frymire">
                 </div>
-                <div class="card">
-                    <h3 class="card-title">NCR Atleos Hackathon: EasyAccess</h3>
-                    <h5 class="card-subtitle">June 2025</h5>
-                    <p class="card-body">
-                        <b>Won 1st place at the Frisco site and ranked in the top 25</b>
-                        <br><br>
-                        Developed a mobile application, for both iOS and android, that would facilitate cardless ATM withdrawals with one's
-                        phone, using a person's biometrics for additional security. Presented a detailed plan for future development of the backend connect to atm and bank.
-                    </p>
-                    <div class="specs">
-                        <span class="spec-tag">Swift</span>
-                        <span class="spec-tag">React Native</span>
-                        <span class="spec-tag">Javascript</span>
+                <div class="row">
+                    <div class="static-card " >
+                        <div class="container">
+                            <div class="row">
+                                <h1 id="static-title" class="card-title"> 
+                                    Creativity is my craft
+                                </h1>
+                            </div>
+                            <div class="row">
+                                <p  class="card-body">
+                                    <em>Technology is my paint</em> 
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a class="social-btn" href="/about" role="button" target="_self">About Me</a>
+                                </div>
+                                <div class="col">
+                                    <a class="social-btn" href="https://www.linkedin.com/in/katie-frymire-2804682a0" role="button" target="_blank">Linkedin</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card" onclick="event.stopPropagation(); window.open('https://github.com/KFry101/Dungeon_Tiles', '_blank')" style="cursor: pointer;"> 
-                    <h3 class="card-title">Dungeon Tiles</h3>
-                    <h5 class="card-subtitle">Spring 2025</h5>
-                    <p class="card-body">
-                        A tile-based dungeon crawling video game.
-                        Features include randomly generated monster (slimes) spawns, tile-based combat/movement, and sprite animations.
-                        Players must navigate through levels and defeat monsters to reach the end of the dungeon before the timer runs out.
-                        The game emphasizes replayability and time pressure, offering unique challenges each run.
-                        <br><br>
-                        Made in my Creative Coding III course at Southern Methodist University.
-                    </p>
-                    <div class="specs">
-                        <span class="spec-tag">Java</span>
-                        <span class="spec-tag">Processing 4</span>
-                    </div> 
-                </div>
-                <div class="card" onclick="event.stopPropagation(); window.open('https://devpost.com/software/ezpptx', '_blank')" style="cursor: pointer;">
-                    <h3 class="card-title">HackSMU VI: EZPPTX</h3>
-                    <h5 class="card-subtitle">October 2024</h5>
-                    <p class="card-body">
-                        <b>Won 1st place Overall and  MLH - Most Creative Adobe Express Add-On 
-                        EzPPTX solves an issue within Adobe Express. </b>
-                        <br><br>
-                        EzPPTX is an Adobe Express add-on that consists of two features: conversion to a dynamic .pptx file and conversion to an AI generated .docx summary file.
-                        <div class="specs">
-                            <span class="spec-tag">Adobe creative sdk</span>
-                            <span class="spec-tag">node.js</span>
-                            <span class="spec-tag">Javascript</span>
-                            <span class="spec-tag">Python</span>
-                            <span class="spec-tag">openai api</span>
-                        </div>
-                    </p>
-                </div>
-            </div> 
-        </div>
-    </section>
-    <hr>
-    <section id="art" class="section">  
-         <div class="container">
-            <div class="section-title-box">
-                <h2 class="section-title">
-                    <span>Art</span>
-                </h2>
             </div>
-            <div class="grid">
-                <div class="card">
-                    <h3 class="card-title"> </h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
+        </section>
 
+        <hr>
 
-                    </p>
+        <section id="code" class="section"> 
+            <div class="container">
+                <div class="section-title-box">
+                    <h2 class="section-title">
+                        <span>Code</span>
+                    </h2>
+                </div>           
+                <div class="grid">
+                    <div class="card" onclick="event.stopPropagation(); window.open('https://github.com/KFry101/CS3341-server-client-game', '_blank')" style="cursor: pointer;">
+                        <h3 class="card-title">Client-Server Game Program</h3>
+                        <h5 class="card-subtitle">November 2025</h5>
+                        <p class="card-body">
+
+                        </p>
+                        <div class="specs">
+                            <span class="spec-tag">Java</span>
+                            <span class="spec-tag">Threads</span>
+                        </div> 
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">NCR Atleos Hackathon: EasyAccess</h3>
+                        <h5 class="card-subtitle">June 2025</h5>
+                        <p class="card-body">
+                            <b>Won 1st place at the Frisco site and ranked in the top 25</b>
+                            <br><br>
+                            Developed a mobile application, for both iOS and android, that would facilitate cardless ATM withdrawals with one's
+                            phone, using a person's biometrics for additional security. Presented a detailed plan for future development of the backend connect to atm and bank.
+                        </p>
+                        <div class="specs">
+                            <span class="spec-tag">Swift</span>
+                            <span class="spec-tag">React Native</span>
+                            <span class="spec-tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="event.stopPropagation(); window.open('https://github.com/KFry101/Dungeon_Tiles', '_blank')" style="cursor: pointer;"> 
+                        <h3 class="card-title">Dungeon Tiles</h3>
+                        <h5 class="card-subtitle">Spring 2025</h5>
+                        <p class="card-body">
+                            A tile-based dungeon crawling video game.
+                            Features include randomly generated monster (slimes) spawns, tile-based combat/movement, and sprite animations.
+                            Players must navigate through levels and defeat monsters to reach the end of the dungeon before the timer runs out.
+                            The game emphasizes replayability and time pressure, offering unique challenges each run.
+                            <br><br>
+                            Made in my Creative Coding III course at Southern Methodist University.
+                        </p>
+                        <div class="specs">
+                            <span class="spec-tag">Java</span>
+                            <span class="spec-tag">Processing 4</span>
+                        </div> 
+                    </div>
+                    <div class="card" onclick="event.stopPropagation(); window.open('https://devpost.com/software/ezpptx', '_blank')" style="cursor: pointer;">
+                        <h3 class="card-title">HackSMU VI: EZPPTX</h3>
+                        <h5 class="card-subtitle">October 2024</h5>
+                        <p class="card-body">
+                            <b>Won 1st place Overall and  MLH - Most Creative Adobe Express Add-On 
+                            EzPPTX solves an issue within Adobe Express. </b>
+                            <br><br>
+                            EzPPTX is an Adobe Express add-on that consists of two features: conversion to a dynamic .pptx file and conversion to an AI generated .docx summary file.
+                            <div class="specs">
+                                <span class="spec-tag">Adobe creative sdk</span>
+                                <span class="spec-tag">node.js</span>
+                                <span class="spec-tag">Javascript</span>
+                                <span class="spec-tag">Python</span>
+                                <span class="spec-tag">openai api</span>
+                            </div>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="art" class="section">  
+            <div class="container">
+                <div class="section-title-box">
+                    <h2 class="section-title">
+                        <span>Art</span>
+                    </h2>
                 </div>
-                <div class="card">
-                    <h3 class="card-title"> </h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="card-title"> </h3>
+                        <h5 class="card-subtitle"> </h5>
+                        <p class="card-body">
 
-                    </p>
-                </div>
 
-                <div class="card">
-                    <h3 class="card-title"> </h3>
-                    <h5 class="card-subtitle"> </h5>
-                    <p class="card-body">
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"> </h3>
+                        <h5 class="card-subtitle"> </h5>
+                        <p class="card-body">
 
-                    </p>
-                </div>
-                <div class="card" onclick="event.stopPropagation(); window.open('/Artwork/SocialStresors', '_blank')" style="cursor: pointer;">
-                    <h3 class="card-title">Social Stressors</h3>
-                    <h5 class="card-subtitle"> 2023</h5>
-                    <p class="card-body">
-                        A collage series confronting the emotional weight of economic hardship. 
-                        Through chaotic layering and symbolic fragments, these works reflect the stress, identity struggles, and systemic pressures faced by those in marginalized communities. 
-                        <br> 
-                    </p>
-                </div>
-            </div> 
-        </div>
-    </section>
-</main>
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title"> </h3>
+                        <h5 class="card-subtitle"> </h5>
+                        <p class="card-body">
+
+                        </p>
+                    </div>
+                    <div class="card" onclick="event.stopPropagation(); window.open('/Artwork/SocialStresors', '_blank')" style="cursor: pointer;">
+                        <h3 class="card-title">Social Stressors</h3>
+                        <h5 class="card-subtitle"> 2023</h5>
+                        <p class="card-body">
+                            A collage series confronting the emotional weight of economic hardship. 
+                            Through chaotic layering and symbolic fragments, these works reflect the stress, identity struggles, and systemic pressures faced by those in marginalized communities. 
+                            <br> 
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </section>
+    </main>
 </body>
 </html>
