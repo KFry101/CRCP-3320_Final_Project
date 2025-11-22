@@ -37,6 +37,10 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+app.get('/gallery', (req, res) => {
+  res.render('gallery');
+});
+
 app.get('/artwork/:id', (req, res) => {
   let artId = req.params.id; //ID value in Mysql table in db eventually 
   artId = encode(artId);

@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<%- include('includes/head', {title: "About"}) %>
-</head>
-<body>
-    <script src="../public/scripts/about_bg_sketch.mjs"></script>
-    <div id="p5-background"></div>
-    <%- include('includes/header') %>
+    <%- include('includes/head', {title: "About"}) %>
 
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title-box-about">
-                <h2 class="section-title-about">
-                    About Me
-                </h2>   
-            </div>
+    <body>
+        <div class="wrapper">
+            <%- include('includes/header') %>
             
-            <h1>Hi, I'm <b>Katie Frymire</b></h1>
 
-            <h2>Background</h2>
-            <p>
-                I'm a junior at Southern Methodist University in Dallas, TX. I am studying Computer Science and Creative Computation with a minor in Data Science.
-                This portfolio showcases my work, including web development, design, and more.
-            </p>
+            <main class="container">
 
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Node.js, Express</li>
-                <li>Git, Figma, REST APIs</li>
-            </ul>
+            </main>
 
-            <h2>Fun Facts</h2>
-            <p>
-                When I'm not coding, I enjoy DND, gaming, and technical theatre.
-            </p>
+            <%- include('includes/footer') %>
         </div>
-    </section>
-    <%- include('includes/footer') %>
-    <%- include('includes/closing-scripts') %>
-</body>
+        
+        <%- include('includes/closing-scripts') %>
+    </body>
+
+</html>
