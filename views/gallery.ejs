@@ -6,14 +6,26 @@
         <div class="wrapper">
             <%- include('includes/header') %>
 
-            <main id="gallery_container" class="container">
+            <main id="gallery_container" class="container-fluid">
                 <div class="row text-center">
-                    <h1>
+                    <h1 id = "page_title">
                         <span>
                             Gallery
                         </span>
                     </h1>
                 </div>
+                <div class="container">
+                    <div class="gallery">
+                        <%- include('includes/card', {}) %>
+                        <%- include('includes/card', {}) %>
+                        <%- include('includes/card', {}) %>
+                        <%- include('includes/card', {}) %>
+                        <%- include('includes/card', {}) %>
+                        <%- include('includes/card', {imgpath: "self.jpg", title: "Social Stressors"}) %>
+                    
+                    </div>
+                </div>
+            
             </main>
 
             <%- include('includes/footer') %>

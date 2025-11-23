@@ -1,0 +1,15 @@
+<div class="card gallery-card">
+    <% if (imgpath && typeof imgpath === 'string') { %>
+        <img src = "<%= imgpath %>" alt = "Gallery Image">
+    <% } else { %>
+        
+    <% } %>
+
+    <% if (typeof title !== 'undefined' && title) { %>
+        <h2 class="gallery-card-body"><%=title%></h2>
+    <% } else { %>
+        <h2 class="gallery-card-body">
+            Art by Katie Frymire
+        </h2>
+    <% } %>
+</div>
