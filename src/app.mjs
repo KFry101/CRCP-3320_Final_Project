@@ -20,11 +20,14 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
-/*
+
 app.use(express.static('assets'));
+
+/*
 app.get('/gallery', (req, res) => {
   res.render('gallery');
 });
+*/
 
 app.get('/artwork/:id', (req, res) => {
   let artId = req.params.id; 
@@ -32,7 +35,7 @@ app.get('/artwork/:id', (req, res) => {
   const sqlQuery = 'SELECT * FROM arts WHERE id = ?';
   res.render('artwork', {artName: artId});
 });
-*/
+
 
 app.use((request, response, next) => {
   response.status(404).render('errors/404');

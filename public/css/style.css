@@ -53,7 +53,6 @@ hr {
 .navbar {
   color: var(--bs-gray-100);
   width: 100%;
-  position: fixed;
   height: 4rem;
   padding: 0; /* IMPORTANT */
   background: rgba(6, 0, 37, 0.2);
@@ -62,6 +61,7 @@ hr {
   z-index: 5;
   transition: all 0.3s ease;
 }
+
 
 
 #footer{
