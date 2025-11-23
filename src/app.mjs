@@ -1,6 +1,8 @@
 import express from 'express';
 import { encode } from 'html-entities';
 
+import { DatabaseClient } from './utils/database-client.mjs';
+
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -29,11 +31,14 @@ app.get('/gallery', (req, res) => {
 });
 */
 
-app.get('/artwork/:id', (req, res) => {
-  let artId = req.params.id; 
-  artId = encode(artId);
-  const sqlQuery = 'SELECT * FROM arts WHERE id = ?';
-  res.render('artwork', {artName: artId});
+app.get('/artwork/:id', async (req, res) => {
+    let artId = req.params.id;
+    artId = encode(artId);
+
+    const dbClient = new DatabaseClient();
+    await dbClient.initConnection();
+    const page = await dbClient.getPageWithPieces(artId);
+    res.render('artwork', {pages: page});
 });
 
 
