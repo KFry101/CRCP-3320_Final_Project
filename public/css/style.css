@@ -51,15 +51,16 @@ hr {
 }
 
 .navbar {
-  color: var(--bs-gray-100);
-  width: 100%;
-  height: 4rem;
-  padding: 0; /* IMPORTANT */
-  background: rgba(6, 0, 37, 0.2);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(145, 116, 255, 0.7);
-  z-index: 5;
-  transition: all 0.3s ease;
+    color: var(--bs-gray-100);
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding: 0; /* IMPORTANT */
+    background: rgba(6, 0, 37, 0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(145, 116, 255, 0.7);
+    z-index: 5;
+    transition: all 0.3s ease;
 }
 
 
@@ -116,12 +117,10 @@ hr {
 .home{
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   position: relative;
 }
 #home-name {
-  margin-top: 3rem;
   font-size: 3rem;
   font-weight: 900;
   margin-bottom: 3rem;
@@ -130,7 +129,7 @@ hr {
 
 .container {
   justify-content: center;
-  padding: 0 1rem ;
+
 }
 #home-content {
   text-align: center;
@@ -153,14 +152,12 @@ hr {
 #static-title {
   font-size: 2.5rem;
   font-weight: 900;
-  position: relative;
-  margin: auto;
+
 }
 #static-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
-  position: relative;
-  margin: auto;
+  margin-bottom: 1rem;
 }
 .social-btn {
   background: rgba(166, 120, 225, 0.2);
@@ -179,9 +176,7 @@ hr {
   background: rgba(166, 120, 225, 0.5);
 }
 .section {
-  margin:0;
-  padding: 5rem 0;
-  padding-top: 10rem;
+  padding-top: 2rem;
   position: relative;
   
 }
@@ -329,7 +324,7 @@ hr {
 /* Gallery page styling */
 #page_title{
   padding: 1rem;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .gallery {

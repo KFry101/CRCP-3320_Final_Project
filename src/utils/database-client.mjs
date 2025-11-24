@@ -5,6 +5,13 @@ export class DatabaseClient {
 
     async initConnection() {
         try {
+            console.log('=== DATABASE CONNECTION DEBUG ===');
+            console.log('Attempting to connect with:');
+            console.log('Host:', process.env.MYSQL_HOST);
+            console.log('User:', process.env.MYSQL_USER);
+            console.log('Database:', process.env.MYSQL_DATABASE);
+            console.log('Port:', process.env.MYSQL_PORT);
+
             this.#dbConnection = await mysql.createConnection({
                 host: process.env.MYSQL_HOST,
                 user: process.env.MYSQL_USER,
@@ -34,7 +41,12 @@ export class DatabaseClient {
     }
 
     async getPageWithPieces(artId) {
-        const page = [];
+        const pages = [];
+
+        if (!this.#dbConnection) {
+            console.error('❌ No database connection!');
+            return null;
+        }
 
         if (this.#dbConnection) {
             try {
@@ -48,30 +60,27 @@ export class DatabaseClient {
 
                     if (page) {
                         page.pieces.push({
-                            pieceId: row.piece_id,
-                            // Add other piece properties here
-                            // e.g., title: row.piece_title,
-                            // imageUrl: row.piece_image_url,
+                            page_id: row.page_id,
+                            path: row.path
                         });
                     } else {
                         pages.push({
                             id: row.id,
-                            // Add page properties here
-                            // e.g., title: row.page_title,
-                            // description: row.page_description,
+                            name: row.name,
+                            description: row.description,
                             pieces: [{
-                                pieceId: row.piece_id,
-                                // Add other piece properties here
+                                page_id: row.page_id,
+                                path: row.path
                             }]
                         });
                     }
                 }
             } catch (error) {
                 console.error('Error fetching page with pieces:', error);
+                throw error;
             }
         }
 
-        return pages.length > 0 ? pages[0] : null; // Return single page or null
+        return pages[0]
     }
-
 }

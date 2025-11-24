@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <%- include('includes/head', {title: artName}) %>
+    <%- include('includes/head', {title:page.name}) %>
     <body>
         <div class="wrapper">
             <%- include('includes/header') %>
             <main class="container">
-
-
-
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 id="page_title" class="text-center"><%= page.name %></h4>
+                        <p class="text-center"><%= page.description %></p>
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Loop through pieces here if you want to display them -->
+                        <% if (page.pieces && page.pieces.length > 0) { %>
+                            <% for (const piece of page.pieces) { %>
+                                <div class="row">
+                                    <img src="/<%= piece.path%>" alt="Thrre was an issue rendering the art photos.">
+                                </div>
+                            <% } %>
+                        <% } else { %>
+                            <p>No pieces available</p>
+                        <% } %>
+                    </div>
+                </div>
             </main>
             <%- include('includes/footer') %>
 

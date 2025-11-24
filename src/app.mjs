@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import express from 'express';
 import { encode } from 'html-entities';
 
@@ -5,6 +7,9 @@ import { DatabaseClient } from './utils/database-client.mjs';
 
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+const dbClient = new DatabaseClient();
+await dbClient.initConnection();
 
 const app = express();
 const port = 3000;
@@ -32,13 +37,25 @@ app.get('/gallery', (req, res) => {
 */
 
 app.get('/artwork/:id', async (req, res) => {
-    let artId = req.params.id;
-    artId = encode(artId);
+    try {
+        console.log('Artwork route hit with id:', req.params.id);
+        let artId = req.params.id;
+        artId = encode(artId);
+        console.log('Encoded artId:', artId);
 
-    const dbClient = new DatabaseClient();
-    await dbClient.initConnection();
-    const page = await dbClient.getPageWithPieces(artId);
-    res.render('artwork', {pages: page});
+        const page = await dbClient.getPageWithPieces(artId);
+        console.log('Page data:', page);
+
+        if (!page) {
+            console.log('No page found, rendering 404');
+            return res.status(404).render('errors/404');
+        }
+
+        res.render('artwork', {page: page});
+    } catch (error) {
+        console.error('Error fetching artwork:', error);
+        res.status(500).render('errors/500');
+    }
 });
 
 
