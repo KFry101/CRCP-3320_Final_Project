@@ -1,25 +1,23 @@
 import 'dotenv/config';
 
 import express from 'express';
+//import helmet from 'helmet';
+//import cors from 'cors';
 import { encode } from 'html-entities';
-
 import { DatabaseClient } from './utils/database-client.mjs';
-
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const dbClient = new DatabaseClient();
-await dbClient.initConnection();
 
 const app = express();
 const port = 3000;
+const dbClient = new DatabaseClient();
+await dbClient.initConnection();
 
+//app.use(helmet());
+//app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
-
 
 
 //Routes

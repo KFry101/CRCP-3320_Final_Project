@@ -5,12 +5,12 @@ export class DatabaseClient {
 
     async initConnection() {
         try {
-            console.log('=== DATABASE CONNECTION DEBUG ===');
-            console.log('Attempting to connect with:');
-            console.log('Host:', process.env.MYSQL_HOST);
-            console.log('User:', process.env.MYSQL_USER);
-            console.log('Database:', process.env.MYSQL_DATABASE);
-            console.log('Port:', process.env.MYSQL_PORT);
+            // console.log('=== DATABASE CONNECTION DEBUG ===');
+            // console.log('Attempting to connect with:');
+            // console.log('Host:', process.env.MYSQL_HOST);
+            // console.log('User:', process.env.MYSQL_USER);
+            // console.log('Database:', process.env.MYSQL_DATABASE);
+            // console.log('Port:', process.env.MYSQL_PORT);
 
             this.#dbConnection = await mysql.createConnection({
                 host: process.env.MYSQL_HOST,
@@ -44,7 +44,7 @@ export class DatabaseClient {
         const pages = [];
 
         if (!this.#dbConnection) {
-            console.error('❌ No database connection!');
+            console.error('No database connection!');
             return null;
         }
 
@@ -70,7 +70,7 @@ export class DatabaseClient {
                             description: row.description,
                             pieces: [{
                                 page_id: row.page_id,
-                                path: row.path
+                                path: row.path //TODO: apply more security for a source or path hacking protection
                             }]
                         });
                     }

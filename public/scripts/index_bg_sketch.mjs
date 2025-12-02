@@ -34,7 +34,7 @@ function setup() {
 function draw() {
   clear();
 
-    const starHue = random(35, 40); // golden-orange hue
+    const starHue = random(35, 45); // golden-orange hue
     //const starHue = random(100, 150); // blueish green hue
 
   for (let i = 0; i < stars.length; i++) {

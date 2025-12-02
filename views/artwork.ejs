@@ -6,11 +6,11 @@
             <%- include('includes/header') %>
             <main class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <h4 id="page_title" class="text-center"><%= page.name %></h4>
                         <p class="text-center"><%= page.description %></p>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                         <!-- Loop through pieces here if you want to display them -->
                         <% if (page.pieces && page.pieces.length > 0) { %>
                             <% for (const piece of page.pieces) { %>
