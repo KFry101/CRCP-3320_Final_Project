@@ -1,8 +1,8 @@
 <div class="card gallery-card">
-    <% if (imgpath && typeof imgpath === 'string') { %>
-        <img src = "<%= imgpath %>" alt = "Gallery Image">
+    <% if (typeof imgpath !== 'undefined' && imgpath) { %>
+        <img src = "<%= imgpath %>" alt = "<%= typeof title !== 'undefined' && title ? title : 'Gallery Image' %>">
     <% } else { %>
-        
+        <img src = "/images/placeholder.jpg" alt = "<%= typeof title !== 'undefined' && title ? title : 'Gallery Image' %>">
     <% } %>
 
     <% if (typeof title !== 'undefined' && title) { %>
