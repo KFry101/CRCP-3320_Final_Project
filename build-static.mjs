@@ -32,6 +32,16 @@ async function buildStaticPages() {
   // Render gallery page (optional, since it's commented out)
   await renderTemplate('gallery', path.join(__dirname, 'docs', 'gallery', 'index.html'));
 
+  // Render example artwork page with sample data
+  const sampleArtwork = {
+    name: 'Sample Artwork',
+    description: 'An example artwork piece',
+    pieces: [
+      { path: 'images/placeholder.jpg' }
+    ]
+  };
+  await renderTemplate('artwork', path.join(__dirname, 'docs', 'artwork', 'index.html'), { page: sampleArtwork });
+
   console.log('\n✓ Static pages built successfully!');
 }
 

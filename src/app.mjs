@@ -26,6 +26,11 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+app.get('/artwork/output-of-you', (req, res) => {
+  res.render('artwork/output-of-you');
+});
+
+
 //
 //
 // app.get('/artwork/:id', async (req, res) => {
