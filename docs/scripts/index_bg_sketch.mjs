@@ -45,8 +45,8 @@ function draw() {
 
     const d = dist(mouseX, mouseY, x, y);
 
-    const pullX = (mouseX - x) * 75 / (d + 1);
-    const pullY = (mouseY - y) * 75 / (d + 1);
+    const pullX = (mouseX - x) * 80 / (d + 1);
+    const pullY = (mouseY - y) * 90 / (d + 1);
     
     const twinkle = s.baseBright + sin(frameCount * s.twinkleSpeed + i) * 20;
     const glowAlpha = map(d, 0, 250, 0.07, 0.02); // fade glow farther away

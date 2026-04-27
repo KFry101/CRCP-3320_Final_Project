@@ -284,6 +284,7 @@ hr {
   min-width: 400px;
   padding: 2rem;
   transition: all 1s ease;
+
 }
 .home-card:hover {
   background: rgba(145, 116, 255, 0.9);
@@ -354,9 +355,10 @@ hr {
   font-size: 1.1rem;
 }
 .specs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
 }
 .spec-tag {
   color: #fff;

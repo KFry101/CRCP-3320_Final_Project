@@ -10,7 +10,7 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="../scripts/index_bg_sketch.mjs"></script>
+    <script src="/scripts/index_bg_sketch.mjs"></script>
     <div id="p5-background"></div>
     <header>
         <nav class="navbar">
@@ -37,7 +37,7 @@
                     </h2>
                 </div>
                 <div class="row align-items-center">
-                    <img id="katie-image" src="../images/self.jpg" class="img fluid rounded-circle" alt="Photo of Katie Frymire">
+                    <img id="katie-image" src="/images/self.jpg" class="img fluid rounded-circle" alt="Photo of Katie Frymire">
                 </div>
                 <div class="row">
                     <div class="static-card " >
@@ -65,9 +65,7 @@
                 </div>
             </div>
         </section>
-
         <hr>
-
         <section id="code" class="section"> 
             <div class="container">
                 <div class="section-title-box">
@@ -76,6 +74,27 @@
                     </h2>
                 </div>           
                 <div class="grid">
+                    <div class="home-card" onclick="event.stopPropagation(); window.open('/artwork/4', '_self')" style="cursor: pointer;">
+                        <h3 class="home-card-title">Neverland Chose-Your-Own Adventure Game</h3>
+                        <h5 class="home-card-subtitle"><em>Coming Soon...</em></h5>
+                        <p class="home-card-body">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br><br>
+                            <br>
+                            <em></em>
+                        </p>
+                        <div class="specs">
+                            <span class="spec-tag">HTML</span>
+                            <span class="spec-tag">Twine</span>
+                            <span class="spec-tag">Narrative Game</span>
+                        </div>
+                    </div>
                     <div class="home-card" onclick="event.stopPropagation(); window.open('https://github.com/KFry101/CS3341-server-client-game', '_blank')" style="cursor: pointer;">
                         <h3 class="home-card-title">Client-Server Game Program</h3>
                         <h5 class="home-card-subtitle">November 2025</h5>
@@ -85,6 +104,9 @@
                             score will be the last digit of the lowest common multiple of the two numbers (LCM).<br><br>
                             Assignment for CS3341 Foundations of Modern Computing<br>
                             Grade: A (100%)
+                            <br><br>
+                            <br>
+                            <em>Click for the GitHub Repository</em>
                         </p>
                         <div class="specs">
                             <span class="spec-tag">Java</span>
@@ -100,6 +122,9 @@
                             <br><br>
                             Developed a mobile application, for both iOS and android, that would facilitate home-cardless ATM withdrawals with one's
                             phone, using a person's biometrics for additional security. Presented a detailed plan for future development of the backend connect to atm and bank.
+                            <br><br>
+                            <br><br>
+                            <br><br><br>
                         </p>
                         <div class="specs">
                             <span class="spec-tag">Swift</span>
@@ -111,12 +136,14 @@
                         <h3 class="home-card-title">Dungeon Tiles</h3>
                         <h5 class="home-card-subtitle">Spring 2025</h5>
                         <p class="home-card-body">
+                            Made in my Creative Coding III course at Southern Methodist University.<br><br>
                             A tile-based dungeon crawling video game.<br>
                             Features include randomly generated monster (slimes) spawns, tile-based combat/movement, and sprite animations.
                             Players must navigate through levels and defeat monsters to reach the end of the dungeon before the timer runs out.
                             The game emphasizes replayability and time pressure, offering unique challenges each run.
                             <br><br>
-                            Made in my Creative Coding III course at Southern Methodist University.
+                            <br>
+                            <em>Click for the GitHub Repository</em>
                         </p>
                         <div class="specs">
                             <span class="spec-tag">Java</span>
@@ -131,6 +158,9 @@
                             EzPPTX solves an issue within Adobe Express. </b>
                             <br><br>
                             EzPPTX is an Adobe Express add-on that consists of two features: conversion to a dynamic .pptx file and conversion to an AI generated .docx summary file.
+                            <br><br>
+                            <br>
+                            <em>Click for Devpost Entry</em>
                             <div class="specs">
                                 <span class="spec-tag">Adobe creative sdk</span>
                                 <span class="spec-tag">node.js</span>
@@ -145,35 +175,33 @@
             <br>
         </section>
 
-        <hr>
-
-        <section id="art" class="section">  
-            <div class="container">
-                <div class="section-title-box">
-                    <h2 class="section-title">
-                        <span>Artwork</span>
-                    </h2>
-                </div>
-                <div class="grid">
-                    <div class="home-card" onclick="event.stopPropagation(); window.open('/artwork/4', '_self')" style="cursor: pointer;">
-                        <h3 class="home-card-title">Neverland Chose-Your-Own Adventure</h3>
-                        <h5 class="home-card-subtitle">2025</h5>
-                        <p class="home-card-body">
-                            <br>
-                        </p>
-                    </div>
-                    <div class="home-card" onclick="event.stopPropagation(); window.open('/artwork/1', '_self')" style="cursor: pointer;">
-                        <h3 class="home-card-title">Social Stressors</h3>
-                        <h5 class="home-card-subtitle">2023</h5>
-                        <p class="home-card-body">
-                            A 3-piece collage series confronting the emotional weight of economic hardship.
-                            Through chaotic layering and symbolic fragments, these works reflect the stress, identity struggles, and systemic pressures faced by those in marginalized communities.
-                            <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--        <section id="art" class="section">  -->
+<!--            <div class="container">-->
+<!--                <div class="section-title-box">-->
+<!--                    <h2 class="section-title">-->
+<!--                        <span>Artwork</span>-->
+<!--                    </h2>-->
+<!--                </div>-->
+<!--                <div class="grid">-->
+<!--                    <div class="home-card" onclick="event.stopPropagation(); window.open('/artwork/4', '_self')" style="cursor: pointer;">-->
+<!--                        <h3 class="home-card-title">Neverland Chose-Your-Own Adventure</h3>-->
+<!--                        <h5 class="home-card-subtitle">2025</h5>-->
+<!--                        <p class="home-card-body">-->
+<!--                            <br>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <div class="home-card" onclick="event.stopPropagation(); window.open('/artwork/1', '_self')" style="cursor: pointer;">-->
+<!--                        <h3 class="home-card-title">Social Stressors</h3>-->
+<!--                        <h5 class="home-card-subtitle">2023</h5>-->
+<!--                        <p class="home-card-body">-->
+<!--                            A 3-piece collage series confronting the emotional weight of economic hardship.-->
+<!--                            Through chaotic layering and symbolic fragments, these works reflect the stress, identity struggles, and systemic pressures faced by those in marginalized communities.-->
+<!--                            <br>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
     </main>
     <footer>
     <nav id="footer" class="navbar">

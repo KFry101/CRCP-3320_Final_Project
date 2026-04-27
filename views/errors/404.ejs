@@ -2,14 +2,20 @@
 <html>
     <%- include('../includes/head', { title: '404: Not Found' }) %>
     <body>
-        <div class="container">
-            <h1 class="text-center my-3">404: Not Found</h1>
-            <p class="text-center">The page you requested does not exist.</p>
-            <p class="text-center">
-                <a href="/" class="btn btn-primary" role="button">Return to Homepage</a>
-            </p>
+        <div class="wrapper">
+            <header id="header">
+                <div class="navbar"></div>
+            </header>
+            <main class="container" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;" >
+                <h1 class="text-center my-3"> Not Found</h1>
+                <p class="text-center">The page  does not exist or is under construction. </p>
+                <p class="text-center"> Please come back later</p>
+                <p class="text-center">
+                    <a href="/" class="btn btn-primary" role="button" style="background: #523d66">Return to Homepage</a>
+                </p>
+            </main>
+            <%- include('../includes/footer') %>
+            <%- include('../includes/closing-scripts') %>
         </div>
-        <%- include('../includes/footer') %>
-        <%- include('../includes/closing-scripts') %>
     </body>
 </html>
