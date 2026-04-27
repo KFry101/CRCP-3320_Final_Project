@@ -14,7 +14,7 @@ const port = 3000;
 //app.use(helmet());
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 
 app.set('views', './views');
