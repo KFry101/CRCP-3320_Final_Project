@@ -32,7 +32,17 @@ async function buildStaticPages() {
   // Render gallery page (optional, since it's commented out)
   await renderTemplate('gallery', path.join(__dirname, 'docs', 'gallery', 'index.html'));
 
-  // Render example artwork page with sample data
+  // Load artworks data
+  const artworksData = await fs.readFile(path.join(__dirname, 'artworks.json'), 'utf8');
+  const artworks = JSON.parse(artworksData);
+
+  // Generate individual artwork pages
+  for (const artwork of artworks) {
+    const outputPath = path.join(__dirname, 'docs', 'artwork', artwork.id, 'index.html');
+    await renderTemplate('artwork', outputPath, { page: artwork });
+  }
+
+  // Render main artwork gallery page with sample data
   const sampleArtwork = {
     name: 'Sample Artwork',
     description: 'An example artwork piece',

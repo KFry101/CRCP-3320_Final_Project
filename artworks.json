@@ -1,0 +1,18 @@
+[
+  {
+    "id": "social-stressors",
+    "name": "Social Stressors",
+    "description": "An exploration of the invisible pressures that shape our interactions",
+    "pieces": [
+      { "path": "images/self.jpg" }
+    ]
+  },
+  {
+    "id": "digital-landscapes",
+    "name": "Digital Landscapes",
+    "description": "Where code meets creativity",
+    "pieces": [
+      { "path": "images/placeholder.jpg" }
+    ]
+  }
+]
