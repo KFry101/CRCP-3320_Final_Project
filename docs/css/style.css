@@ -429,6 +429,20 @@ gallery-card:hover {
   transform: scale(1.03);
 }
 
+.gallery-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background 0.25s ease;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.gallery-card:hover::after {
+  background: rgba(0,0,0,0.08);
+}
+
 .gallery-card-body {
   font-size: 0.9rem;
   font-weight: 600;
