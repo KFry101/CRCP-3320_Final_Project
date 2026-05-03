@@ -398,6 +398,11 @@ hr {
   transition: all 1s ease;
 }
 
+img > .gallery-card {
+  width: 100%;
+  display: block;
+}
+
 .gallery-card-body {
   line-height: 1.8rem;
   padding: 1rem;
