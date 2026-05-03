@@ -398,8 +398,9 @@ hr {
   transition: all 1s ease;
 }
 
-img > .gallery-card {
+.gallery-card img{
   width: 100%;
+  height: auto;
   display: block;
 }
 
