@@ -395,13 +395,15 @@ hr {
   margin-bottom: 1.5rem;       /* vertical gap between cards */
   display: inline-block;       /* required for break-inside to work reliably */
   width: 100%;
+  overflow: hidden;
   transition: all 1s ease;
 }
 
 .gallery-card img{
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   display: block;
+  max-width: 100%;
 }
 
 .gallery-card-body {
