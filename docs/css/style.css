@@ -381,20 +381,24 @@ hr {
 
 .gallery {
   width: 100%;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  gap: 4rem;
+  columns: 4 300px; /* masonry magic: column-count + min-width */
+  column-gap: 1.5rem;
   perspective: 1000px;
 }
 
 .gallery-card {
   background: rgba(145, 116, 255, 0.7);
-  color:#fff;
+  color: #fff;
   position: relative;
   min-width: 200px;
+  break-inside: avoid;         /* prevents cards from splitting across columns */
+  margin-bottom: 1.5rem;       /* vertical gap between cards */
+  display: inline-block;       /* required for break-inside to work reliably */
+  width: 100%;
   transition: all 1s ease;
 }
-.gallery-card-body{
+
+.gallery-card-body {
   line-height: 1.8rem;
   padding: 1rem;
   text-align: center;
