@@ -1,8 +1,22 @@
+:root {
+  --bg-dark: #2e2933;
 
-.text-purple {
-  color:  rgba(145, 116, 255, 1);
-  text-shadow: 10px 10px 15px  rgba(38, 0, 141, 0.4);
+  --text-white: #f8f9fa;
+  --text-purple: #9174ff;
+  --text-shadow: #26008d66;
+
+  --bs-purple-100: #e1cffc;
+  --bs-purple-200: #c09eff;
+  --bs-purple-300: #a079e0;
+  --bs-purple-400: #9174ff;
+  --bs-purple-500: #6b4fe0;
+  --bs-purple-600: #523d66;
+  --bs-purple-700: #3a2a4d;
+
+  --shadow-purple: #26008d66;
+
 }
+
 
 html, body {
   height: 100%; /* Ensure html and body take full viewport height */
@@ -11,8 +25,8 @@ html, body {
 
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  background:#2e2933;
-  color: var(--bs-gray-100);
+  background: var(--bg-dark);
+  color: var(--text-white);
   overflow-x: hidden;
 }
 
@@ -37,7 +51,7 @@ main {
 }
 
 hr {
-  border: 3px solid #523d66;
+  border: 3px solid var(--bs-purple-600);
 }
 
 #katie-image {
@@ -45,9 +59,9 @@ hr {
   height: auto;
   margin: auto;
   padding:0px;
-  border: 8px solid rgba(145, 116, 255, 1);
+  border: 8px solid var(--bs-purple-400);
   margin-bottom: 3rem;
-  box-shadow: 0 20px 40px rgba(38, 0, 141, 0.4);
+  box-shadow: 0 20px 40px var(--shadow-purple);
   justify-self: center;
 }
 
@@ -141,13 +155,13 @@ hr {
 
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: var(--bs-purple-300);}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .navbar-btn {background-color: #4f3e8e;}
+.dropdown:hover .navbar-btn {background-color: var(--bs-purple-500);}
 
 .home{
   height: 100vh;
@@ -174,7 +188,7 @@ hr {
   padding: 0 2rem;
 }
 .static-card {
-  background: linear-gradient(150deg,  rgba(145, 116, 255, 0.9), rgba(78, 58, 255, .7));
+  background: linear-gradient(150deg,  var(--bs-purple-400), var(--bs-purple-500));
   border: 0px solid transparent;
   border-radius: 2rem;
   display:inline-block;
@@ -183,7 +197,7 @@ hr {
   width: auto;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(38, 0, 141, 0.3);
+  box-shadow: 0 20px 40px var(--shadow-purple);
 }
 #static-title {
   font-size: 2.5rem;
@@ -196,7 +210,7 @@ hr {
   margin-bottom: 1rem;
 }
 .social-btn {
-  background: rgba(166, 120, 225, 0.2);
+  background: var(--bs-purple-600);
   border: 2px solid transparent;
   color: #fff;
   margin: auto;
