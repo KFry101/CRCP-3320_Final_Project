@@ -64,8 +64,6 @@ hr {
     transition: all 0.3s ease;
 }
 
-
-
 #footer{
   height:3rem;
   padding: 0; 
@@ -114,6 +112,31 @@ hr {
 }
 .navbar-btn:hover {
   border:  rgba(145, 116, 255, 0.7) 2px solid;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .home{
@@ -399,7 +422,7 @@ hr {
 }
 
 .gallery-card {
-  background: #d29aff;
+  background: #bd9aff;
   color: #111;
   position: relative;
   min-width: 200px;
